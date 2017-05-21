@@ -25,6 +25,19 @@ class Collection extends Mongo.Collection {
             });
         });
     }
+
+    async genRemove(selector) {
+        return new Promise((resolve, reject) => {
+            this.remove(selector, (error, result) => {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(result);
+                }
+            });
+        });
+    }
+
 }
 
 export default new Collection('fabricObjects');

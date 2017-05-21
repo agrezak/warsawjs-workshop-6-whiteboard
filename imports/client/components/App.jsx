@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Login from './Login';
 import Whiteboard from './Whiteboard.jsx';
 import FabricObjects from '../../lib/fabric-objects';
 
@@ -21,6 +22,7 @@ export default class App extends React.Component {
         return (
             <div className="container">
                 <h1>Whiteboard App</h1>
+                <Login />
                 <Whiteboard
                     isDrawingMode={isDrawingMode}
                 />
