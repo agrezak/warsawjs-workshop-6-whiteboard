@@ -6,7 +6,7 @@ export default class App extends Component {
     render() {
         return (
             <div className="container">
-                Whiteboard
+                <h1>Whiteboard App</h1>
                 <Whiteboard/>
             </div>
         );
