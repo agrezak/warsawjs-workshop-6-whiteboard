@@ -17,3 +17,7 @@ body {
 .canvas {
     border: 5px solid #c0392b;
 }
+
+label {
+    margin-top: 1rem;
+}
