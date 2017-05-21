@@ -17,19 +17,21 @@ export default class Whiteboard extends Component {
 
         this.canvas.on('object:added', async ({ target: fabricObject }) => {
             try {
+                // const id = FabricObjects.insert(fabricObject.toObject()); - another way of inserting obj
                 const id = await FabricObjects.genInsert(fabricObject.toObject());
                 fabricObject.id = id;
-                console.log(id);
-                // const id = FabricObjects.insert(fabricObject.toObject());
-
             } catch(e) {
                 console.log(String(e));
             }
-
         });
 
-        this.canvas.on('object:modified', () => {
-
+        this.canvas.on('object:modified', async ({ target: fabricObject }) => {
+            try {
+                await FabricObject.genUpdate(fabricObject.id, fabricObject.toObject());
+                fabricObject.id = id;
+            } catch(e) {
+                console.log(String(e));
+            }
         });
 
         this.canvas.on('object:remove', () => {
