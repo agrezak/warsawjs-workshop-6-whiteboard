@@ -1,1 +1,19 @@
-/* CSS declarations go here */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e74c3c;
+    color: #fff;
+    height: 100vh;
+}
+
+.canvas {
+    border: 5px solid #c0392b;
+}
